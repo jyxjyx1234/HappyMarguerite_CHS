@@ -73,7 +73,7 @@
 
 ### 使用说明
 
-购买并正确安装游戏本体，下载release中的补丁压缩包，或下载 `Marguerite_chs`文件夹中的内容（建议使用这一种方法），将其中所有内容放至游戏所在文件夹，点击 `汉化启动.exe`启动汉化版。**务必选择汉化启动.exe启动，从另一个exe文件启动会出现闪退等情况。**文件中包含的字体为个人推荐的阅读体验较好的字体，可安装后在游戏的设置中更改字体。
+购买并正确安装游戏本体，下载release中的补丁压缩包，或下载 `Marguerite_chs`文件夹中的内容（建议使用这一种方法），将其中所有内容放至游戏所在文件夹，点击Marguerite_chs.exe运行。请安装对应的字体文件（我不确定这个字体系统有没有自带），或者选择自己喜欢的字体，然后再uif_config.json中的"override_face"下进行修改。uif_config.json中还有其他的设置，可以参见[UniversalInjectorFramework](https://github.com/AtomCrafty/UniversalInjectorFramework)按照自己的喜好进行修改。
 
 ##### 重新封包
 
@@ -85,5 +85,5 @@
 
 * [fvp](https://github.com/Tabing010102/fvp)  : 对hcb脚本进行拆封包
 * [Sakura-13B-Galgame](https://github.com/SakuraLLM/Sakura-13B-Galgame) : 适配轻小说/Galgame的日中翻译大模型
-* [FVPLoader](https://github.com/xmoezzz/FVPLoader) : 修正乱码
+* [UniversalInjectorFramework](https://github.com/AtomCrafty/UniversalInjectorFramework)：对汉化后的文本进行修正以正常显示
 * [GalTransl](https://github.com/xd2333/GalTransl) ：自动化翻译工具

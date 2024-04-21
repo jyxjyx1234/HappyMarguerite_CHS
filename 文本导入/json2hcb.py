@@ -17,11 +17,6 @@ def hanzitihuan(text):#按照字典替换不支持的汉字，后续通过Univer
 def fuhaotihuan(text):#替换掉译文中一些不支持的常见特殊符号形式，以正常显示
     return text.replace('—','ー').replace('～','〜').replace('“','「').replace('”','」').replace('·','・')
 
-def hanzitihuan(text):
-    return text#gbk输出下，无需替换
-def fuhaotihuan(text):#gbk输出下，反向替换
-    return text.replace('ー','—').replace('～','〜').replace('・','·')
-
 transpath='.\译文\Marguerite_strings.json'
 with open(transpath,'r',encoding='utf-8') as f:
     trans=json.load(f)
@@ -43,21 +38,12 @@ with codecs.open('.\OriginFile\Marguerite.txt', 'r', encoding='utf8') as input_f
                     content = line.strip()[11:]
                     content1 = teshuzifutihuan(content)
                     sline=content
-                    if line.replace('\n','')=='\tpushstring 　':
-                        line = line.replace("pushstring ","pushstring @")
-                    elif line.replace('\n','')=='\tpushstring 「':
-                        line = line.replace("pushstring ","pushstring @")
-                    elif line.replace('\n','')=='\tpushstring 」':
-                        line = line.replace("pushstring ","pushstring @")
-                    elif line.replace('\n','')=='\tpushstring 「」。、？！」』☆）　':
-                        line = line.replace("pushstring ","pushstring @")
-                    elif line.replace('\n','')=='\tpushstring ~「':
-                        line = line.replace("pushstring ","pushstring @")
-                    elif content1 in replacement_dict:
+                    
+                    if content1 in replacement_dict:
                         if len(content1)>0:
                             if not re.match(r'[A-Za-z]', content1[0]):#避免对调用资源文件的代码进行替换
                                 if replacement_dict[content1]!="Failed translation":
-                                    line = line.replace(content,'@'+replacement_dict[content1])
+                                    line = line.replace(content,replacement_dict[content1])
                                     sline= replacement_dict[content1]
                     himestrings.write(fuhaotihuan(hanzitihuan(sline))+'\n')
                 hime.write(fuhaotihuan(hanzitihuan(line)))
