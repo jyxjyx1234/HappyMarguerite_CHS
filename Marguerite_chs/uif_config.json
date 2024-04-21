@@ -31,18 +31,18 @@
   "font_manager": {
     "enable": true,
     "resource_files": [
-      "SIMHEI.TTF","DENGL.TTF","MSYHBD.TTC"
+      
     ],
     "spoof_enumeration": {
       "enable": false,
       "filter_pitch_and_family": 0,
-      "filter_charset": 1,
-      "spoof_charset": 128
+      "filter_charset": 134,
+      "spoof_charset": 134
     },
     "spoof_creation": {
       "enable": true,
-      "override_face": "Microsoft Yahei UI Bold",
-      "override_charset": 0
+      "override_face": "",
+      "override_charset": 134
     }
   }
 }
