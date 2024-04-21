@@ -73,7 +73,7 @@
 
 ### 使用说明
 
-购买并正确安装游戏本体，下载release中的补丁压缩包，或下载 `Marguerite_chs`文件夹中的内容（建议使用这一种方法），将其中所有内容放至游戏所在文件夹，点击Marguerite_chs.exe运行。请安装对应的字体文件（我不确定这个字体系统有没有自带），或者选择自己喜欢的字体，然后再uif_config.json中的"override_face"下进行修改（说实话这个字体我也不是很满意，太小了，如果发现有什么更好用的字体可以提issue）。uif_config.json中还有其他的设置，可以参见[UniversalInjectorFramework](https://github.com/AtomCrafty/UniversalInjectorFramework)按照自己的喜好进行修改。
+购买并正确安装游戏本体，**打好修正补丁（1.2版本）**，下载release中的补丁压缩包，或下载 `Marguerite_chs`文件夹中的内容（建议使用这一种方法），将其中所有内容放至游戏所在文件夹，点击Marguerite_chs.exe运行。请安装对应的字体文件（我不确定这个字体系统有没有自带），或者选择自己喜欢的字体，然后再uif_config.json中的"override_face"下进行修改（说实话这个字体我也不是很满意，太小了，如果发现有什么更好用的字体可以提issue）。uif_config.json中还有其他的设置，可以参见[UniversalInjectorFramework](https://github.com/AtomCrafty/UniversalInjectorFramework)按照自己的喜好进行修改。
 
 ##### 重新封包
 
