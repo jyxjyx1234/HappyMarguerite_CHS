@@ -1,0 +1,43 @@
+月城	月城	name,boy
+千秋	千秋	name,boy
+じじい	老头
+いなほ	稻穂	name,girl
+天ヶ原	天ヶ原	name,girl
+稲穂	稻穂	name,girl
+さくら	咲良	name,girl
+笠松	笠松	name,girl
+凛東	凛东	name,girl
+彩月	彩月	name,girl
+りんどう	凛东	name,girl
+さき	彩月	name,girl
+西宮	西宫	name,girl
+静琉	静琉	name,girl
+にしのみや	西宫	name,girl
+しずる	静琉	name,girl
+南初瀬	南初濑	name,girl
+花梨	花梨	name,girl
+オルタンシア	奥尔坦西亚	name,girl
+みなはせ	南初濑	name,girl
+かりん	花梨	name,girl
+カリン	花梨	name,girl
+北乃路	北乃路	name,girl
+希	希	name,girl
+きたのじ	北乃路	name,girl
+のぞみ	希	name,girl
+石蕗	石蕗	name
+晶	晶	name
+咲良	咲良	name,girl
+真央	真央	name,girl
+まお	真央	name,girl
+カーペンター	卡彭特	name
+九香	九香	name
+撫子	抚子	name
+響	乡	name
+宙	宙	name
+ジョシュア	乔舒亚	name
+キャスター	caster
+悠綺	悠绮	name
+メイド	女仆
+拉致	绑架
+
+
