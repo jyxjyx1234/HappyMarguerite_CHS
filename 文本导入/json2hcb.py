@@ -3,15 +3,24 @@ import re
 import json
 from hanzidict import hanzidict
 
+
+source_chars=''
+target_chars=''
+
 def teshuzifutihuan(text):#匹配时去除特殊字符
     text = text.replace("♪", "").replace("・", "").replace("〜", "").replace("～", "").replace("?", "").replace(" ", "").replace('\u3000','').replace('\t','').replace(']','').replace('[・|','')
     text=re.sub('\[([^|\]]+)\|','',text)#删除脚本中的注音标识
     return text
 
 def hanzitihuan(text):#按照字典替换不支持的汉字，后续通过UniversalInjectorFramework替换回去以正常显示
+    global target_chars,source_chars
     replaced_string=''
     for char in text:
         replaced_string += hanzidict.get(char, char)
+        if char in hanzidict:
+            if char not in target_chars:
+                target_chars=target_chars+char
+                source_chars=source_chars+hanzidict[char]
     return replaced_string
 
 def fuhaotihuan(text):#替换掉译文中一些不支持的常见特殊符号形式，以正常显示
@@ -38,7 +47,6 @@ with codecs.open('.\OriginFile\Marguerite.txt', 'r', encoding='utf8') as input_f
                     content = line.strip()[11:]
                     content1 = teshuzifutihuan(content)
                     sline=content
-                    
                     if content1 in replacement_dict:
                         if len(content1)>0:
                             if not re.match(r'[A-Za-z]', content1[0]):#避免对调用资源文件的代码进行替换
@@ -50,3 +58,10 @@ with codecs.open('.\OriginFile\Marguerite.txt', 'r', encoding='utf8') as input_f
 
 import os
 os.system('.\文本导入\封包.cmd')
+
+f=open('.\\Marguerite_chs\\uif_config.json','r',encoding='utf8',errors='ignore')
+f=json.load(f)
+f["text_processor"]["rules"][0]["source_chars"]=source_chars
+f["text_processor"]["rules"][0]["target_chars"]=target_chars
+fout=open('.\\Marguerite_chs\\uif_config.json','w',encoding='utf8')
+json.dump(f,fout,ensure_ascii=False,indent=4)
