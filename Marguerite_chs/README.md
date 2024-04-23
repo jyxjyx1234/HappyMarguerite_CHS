@@ -2,7 +2,7 @@
 
 此项目是[FAVORITE](http://www.favo-soft.jp/ "このブランドの公式サイトを開く")社HappyMarguerite（はっぴぃ☆マーガレット！）的AI翻译补丁，使用[Sakura](https://github.com/SakuraLLM/Sakura-13B-Galgame) v0.10进行翻译。（至此F社的3部旧作都有机翻了）
 
-目前尚未开始校对，可能有较多错翻。
+目前正在边推边修改一些显眼的错误。
 
 本项目以交流ChatGPT翻译为目的，仅供交流学习。请在购买了[游戏本体](https://www.getchu.com/soft.phtml?id=664010)的基础上使用。
 
@@ -75,9 +75,29 @@
 
 购买并正确安装游戏本体，**打好修正补丁（1.2版本）**，下载release中的补丁压缩包，或下载 `Marguerite_chs`文件夹中的内容（建议使用这一种方法），将其中所有内容放至游戏所在文件夹，点击Marguerite_chs.exe运行。如果需要选择自己喜欢的字体，可以在uif_config.json中的"override_face"下进行修改。目前还没有找到笔画等宽、文字大的字体，如果发现有比较好的字体，欢迎提issue。uif_config.json中还有其他的设置，可以参见[UniversalInjectorFramework](https://github.com/AtomCrafty/UniversalInjectorFramework)按照自己的喜好进行修改。
 
-##### 重新封包
+### 重新封包
 
 下载本项目的所有文件，点击 `一键封包.cmd`即可在 `Marguerite_chs`文件夹中生成新的bch文件。汉化文本在 `译文`文件夹中，如发现错翻等问题可以修改json文件中的 `"post_zh_preview"`项，然后重新封包。**注意，替换bch文件后之前的存档会全部失效。**
+
+### 更新日志
+
+##### 20240422
+
+修正了闪退的bug
+修正了字体（但现在这个字体还是不怎么样）
+
+##### 20240423
+
+修正了部分文字显示异常。（需要替换uif_config.json）
+修正了一些翻译错误：
+统一了对于男主昵称“ちーちゃん”的翻译
+修正了称男主为“xx小姐”的错译
+某女主名字"さくら"的汉字写法在前面是不应该知道的，初翻时直接根据官网简介中给的汉字进行替换了，现在进行了修正。
+一点点其他小错误
+
+##### 20240424
+
+前7章推完了，改了一些明显的错误。
 
 ### 致谢
 
@@ -87,3 +107,4 @@
 * [Sakura-13B-Galgame](https://github.com/SakuraLLM/Sakura-13B-Galgame) : 适配轻小说/Galgame的日中翻译大模型
 * [UniversalInjectorFramework](https://github.com/AtomCrafty/UniversalInjectorFramework)：对汉化后的文本进行修正以正常显示
 * [GalTransl](https://github.com/xd2333/GalTransl) ：自动化翻译工具
+* [Locale-Emulator](https://github.com/xupefei/Locale-Emulator) ：转区运行
