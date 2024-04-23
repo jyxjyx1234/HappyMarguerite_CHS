@@ -7,8 +7,14 @@ out=[]
 yiwen=json.load(yiwen)
 
 for dic in yiwen:
-    if ('ちーちゃん' in dic["pre_jp"]) or ('ちーちゃ' in dic["pre_jp"]):
-        if '小千' not in dic['post_zh_preview']:
-            if '小～千' not in dic['post_zh_preview']:
-                print(dic["index"])
+    if 'さくら' in dic["pre_jp"]:
+        if "咲良" not in dic["pre_jp"]:
+            dic["post_zh_preview"]=dic["post_zh_preview"].replace('樱','さくら').replace('咲良','さくら').replace('咲','さ')
+    
+    if 'まお' in dic["pre_jp"]:
+        if "真央" not in dic["pre_jp"]:
+            dic["post_zh_preview"]=dic["post_zh_preview"].replace('真央','まお')
+    out.append(dic)
+
+json.dump(out,yiwenout,ensure_ascii=False,indent=4)
             
