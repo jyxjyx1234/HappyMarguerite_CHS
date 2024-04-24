@@ -1,8 +1,8 @@
+#封包用
 import codecs
 import re
 import json
 from hanzidict import hanzidict
-
 
 source_chars=''
 target_chars=''
@@ -59,12 +59,13 @@ with codecs.open('.\OriginFile\Marguerite.txt', 'r', encoding='utf8') as input_f
 import os
 os.system('.\文本导入\封包.cmd')
 
-f=open('.\\Marguerite_chs\\uif_config.json','r',encoding='utf8',errors='ignore')
-f=json.load(f)
-f["text_processor"]["rules"][0]["source_chars"]=source_chars
-f["text_processor"]["rules"][0]["target_chars"]=target_chars
-fout=open('.\\Marguerite_chs\\uif_config.json','w',encoding='utf8')
-json.dump(f,fout,ensure_ascii=False,indent=4)
+with open('.\\Marguerite_chs\\uif_config.json','r',encoding='utf8',errors='ignore') as f:
+    f=json.load(f)
+    f["text_processor"]["rules"][0]["source_chars"]=source_chars
+    f["text_processor"]["rules"][0]["target_chars"]=target_chars
+
+with open('.\\Marguerite_chs\\uif_config.json','w',encoding='utf8') as fout:
+    json.dump(f,fout,ensure_ascii=False,indent=4)
 
 os.system('copy README.md Marguerite_chs\\')
 os.system('del Marguerite_chs.rar')
