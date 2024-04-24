@@ -1,1 +1,1 @@
-py "./文本导入/json2hcb.py"
+py "./文本导入/json2hcb_new.py"

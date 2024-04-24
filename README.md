@@ -4,7 +4,11 @@
 
 目前正在边推边修改一些显眼的错误。
 
-本项目以交流ChatGPT翻译为目的，仅供交流学习。请在购买了[游戏本体](https://www.getchu.com/soft.phtml?id=664010)的基础上使用。
+本项目以交流AI翻译为目的，仅供交流学习。请在购买了[游戏本体](https://www.getchu.com/soft.phtml?id=664010)的基础上使用。
+
+本补丁发布于[https://github.com/jyxjyx1234/HappyMarguerite_CHS](https://github.com/jyxjyx1234/HappyMarguerite_CHS)
+
+查看本人制作的其他机翻补丁：[https://github.com/jyxjyx1234?tab=repositories](https://github.com/jyxjyx1234?tab=repositories)
 
 ### 游戏信息
 
@@ -98,6 +102,12 @@
 ##### 20240424
 
 前7章推完了，改了一些明显的错误。
+
+##### 20240425
+
+共同线推完了，改了一些明显的错误。
+
+对于sjis编码不支持的汉字采用了新的方法进行处理，所以uif_config.json也需进行替换。
 
 ### 致谢
 
