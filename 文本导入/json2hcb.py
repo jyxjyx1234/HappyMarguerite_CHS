@@ -65,3 +65,7 @@ f["text_processor"]["rules"][0]["source_chars"]=source_chars
 f["text_processor"]["rules"][0]["target_chars"]=target_chars
 fout=open('.\\Marguerite_chs\\uif_config.json','w',encoding='utf8')
 json.dump(f,fout,ensure_ascii=False,indent=4)
+
+os.system('copy README.md Marguerite_chs\\')
+os.system('del Marguerite_chs.rar')
+os.system('Rar a -m0 Marguerite_chs.rar Marguerite_chs\\')
