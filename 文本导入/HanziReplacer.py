@@ -54,9 +54,9 @@ def Createhanzidict(tempdict,replacelist):#输出hanzidic,target_chars,source_ch
         source_chars=source_chars+hanzidic[char]
     return hanzidic,target_chars,source_chars
 
-def teshuzifutihuan(text):#匹配时去除特殊字符
-    text = text.replace("♪", "").replace("・", "").replace("〜", "").replace("～", "").replace("?", "").replace(" ", "").replace('\u3000','').replace('\t','').replace(']','').replace('[・|','')
+def teshuzifutihuan(text):#匹配时去除特殊字符 
     text=re.sub('\[([^|\]]+)\|','',text)#删除脚本中的注音标识
+    text = text.replace("♪", "").replace("〜", "").replace("～", "").replace("?", "").replace(" ", "").replace('\u3000','').replace('\t','').replace(']','').replace('[・|','').replace('『','').replace('』','').replace('[・・|','').replace("・", "")
     return text
 
 def fuhaotihuan(text):#替换掉译文中一些不支持的常见特殊符号形式，以正常显示
