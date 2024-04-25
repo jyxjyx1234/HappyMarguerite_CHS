@@ -25,6 +25,7 @@ with codecs.open('.\OriginFile\Marguerite.txt', 'r', encoding='utf8') as input_f
     with codecs.open(".\\fvp\\Marguerite_transed.txt", 'w', encoding='utf8') as output:
         with codecs.open(".\\fvp\\Marguerite_strings_transed.txt", 'w', encoding='utf8') as outputstrings:
             for line in input_file:
+                line0=line
                 if line.startswith("\tpushstring "):
                     content = line.strip()[11:]
                     content1 = teshuzifutihuan(content)
@@ -35,6 +36,12 @@ with codecs.open('.\OriginFile\Marguerite.txt', 'r', encoding='utf8') as input_f
                                 if replacement_dict[content1]!="Failed translation":
                                     line = line.replace(content,replacement_dict[content1])
                                     sline= replacement_dict[content1]
+                                    if content.replace('\n','')=='‥‥':
+                                        line=line0
+                                        sline=content
+                                    if content.replace('\n','')=='‥‥‥':
+                                        line=line0
+                                        sline=content
                     outputstrings.write(hanzitihuan(fuhaotihuan(sline),hanzidict)+'\n')
                 output.write(hanzitihuan(fuhaotihuan(line),hanzidict))
 
