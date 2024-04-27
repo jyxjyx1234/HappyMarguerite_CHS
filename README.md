@@ -81,6 +81,8 @@
 
 购买并正确安装游戏本体，**打好修正补丁（1.2版本）**，下载release中的补丁压缩包，或下载 `Marguerite_chs`文件夹中的内容（建议使用这一种方法），将其中所有内容放至游戏所在文件夹，点击Marguerite_chs.exe运行。如果需要选择自己喜欢的字体，可以在uif_config.json中的"override_face"下进行修改。目前还没有找到笔画等宽、文字大的字体，如果发现有比较好的字体，欢迎提issue。uif_config.json中还有其他的设置，可以参见[UniversalInjectorFramework](https://github.com/AtomCrafty/UniversalInjectorFramework)按照自己的喜好进行修改。
 
+之前的全cg存档似乎在对文本汉化后无法正常使用，之后会更新针对此机翻补丁的全cg存档。
+
 ### 重新封包
 
 下载本项目的所有文件，点击 `一键封包.cmd`即可在 `Marguerite_chs`文件夹中生成新的bch文件。汉化文本在 `译文`文件夹中，如发现错翻等问题可以修改json文件中的 `"post_zh_preview"`项，然后重新封包。**注意，替换bch文件后之前的存档会全部失效。**
